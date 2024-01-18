@@ -21,15 +21,15 @@ Output: [0,0,9,0,0]
 public class ProductOfArrayExceptSelf {
 
     // Not the best Solution it can be optimized
-    
+
     class Solution {
         public int[] productExceptSelf(int[] nums) {
-            int [] nums2 = new int[nums.length];
-    
-            for(int i =0; i< nums.length; i++){
+            int[] nums2 = new int[nums.length];
+
+            for (int i = 0; i < nums.length; i++) {
                 nums2[i] = 1;
-                for(int j = 0; j<nums.length; j++){
-                    if( i != j){
+                for (int j = 0; j < nums.length; j++) {
+                    if (i != j) {
                         nums2[i] *= nums[j];
                     }
                 }
@@ -37,7 +37,8 @@ public class ProductOfArrayExceptSelf {
             return nums2;
         }
     }
+
     public static void main(String[] args) {
-        
+
     }
 }

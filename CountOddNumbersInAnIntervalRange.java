@@ -16,9 +16,17 @@ Output: 1
 Explanation: The odd numbers between 8 and 10 are [9].
  */
 
-
 public class CountOddNumbersInAnIntervalRange {
+    public static int countNumber(int low, int high) {
+        int num = high - low;
+        if (num % 2 == 0) {
+            return (num / 2);
+        } else {
+            return (num / 2) + 1;
+        }
+    }
+
     public static void main(String[] args) {
-        
+
     }
 }

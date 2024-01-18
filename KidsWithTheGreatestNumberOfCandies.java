@@ -24,20 +24,20 @@ Explanation: If you give all extraCandies to:
 
 
 
- */
+*/
 
 import java.util.ArrayList;
 import java.util.List;
 
 class Solution {
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
-  
+
         List<Boolean> list = new ArrayList();
 
-        for(int i = 0 ; i< candies.length ; i++){
-              boolean b = true;
-            for(int j =0 ; j< candies.length; j++){
-                if(candies[i]+extraCandies <  candies[j]){
+        for (int i = 0; i < candies.length; i++) {
+            boolean b = true;
+            for (int j = 0; j < candies.length; j++) {
+                if (candies[i] + extraCandies < candies[j]) {
                     b = false;
                 }
             }
@@ -47,10 +47,8 @@ class Solution {
     }
 }
 
-
-
 public class KidsWithTheGreatestNumberOfCandies {
     public static void main(String[] args) {
-        
+
     }
 }

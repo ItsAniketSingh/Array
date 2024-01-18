@@ -21,33 +21,31 @@ rotate 1 steps to the right: [99,-1,-100,3]
 rotate 2 steps to the right: [3,99,-1,-100]
  */
 
-
 public class RotateArray {
-    class Solution {
-        public void reverse(int [] nums , int s, int e){
-            int temp;
-            while(s<e){
-                temp = nums[s];
-                nums[s] = nums[e];
-                nums[e] = temp;
-                s++;
-                e--;
-            }
-            
+
+    public void reverse(int[] nums, int s, int e) {
+        int temp;
+        while (s < e) {
+            temp = nums[s];
+            nums[s] = nums[e];
+            nums[e] = temp;
+            s++;
+            e--;
         }
-        public void rotate(int[] nums, int k) {
-            
-            int n = nums.length;
-            k = k%n;
-            reverse(nums,0, n-1);
-            reverse(nums,0,k-1);
-            reverse(nums,k,n-1);
-    
-           
-            
-        }
+
     }
+
+    public void rotate(int[] nums, int k) {
+
+        int n = nums.length;
+        k = k % n;
+        reverse(nums, 0, n - 1);
+        reverse(nums, 0, k - 1);
+        reverse(nums, k, n - 1);
+
+    }
+
     public static void main(String[] args) {
-        
+
     }
 }

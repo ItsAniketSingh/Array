@@ -18,15 +18,13 @@ Explanation: The altitudes are [0,-5,-4,1,1,-6]. The highest is 1.
 
  */
 
-
- class Solution {
+class Solution {
     public int largestAltitude(int[] gain) {
         int alt = 0;
         int result = 0;
 
-
-        for(int i =0; i< gain.length; i++){
-           alt = alt + gain[i];
+        for (int i = 0; i < gain.length; i++) {
+            alt = alt + gain[i];
             result = Math.max(result, alt);
 
         }
@@ -34,12 +32,8 @@ Explanation: The altitudes are [0,-5,-4,1,1,-6]. The highest is 1.
     }
 }
 
-
-
-
-
 public class FindTheHighestAltitude {
     public static void main(String[] args) {
-        
+
     }
 }
