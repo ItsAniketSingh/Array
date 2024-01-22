@@ -40,33 +40,31 @@ public class FindPivotIndex {
 
     // This solution can be optimized
 
-    class Solution {
-        public static int sumLeft(int[] nums, int n) {
-            int sum = 0;
-            for (int i = 0; i < n; i++) {
-                sum += nums[i];
-            }
-            return sum;
+    public static int sumLeft(int[] nums, int n) {
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum += nums[i];
         }
+        return sum;
+    }
 
-        public static int sumRight(int[] nums, int n) {
-            int sum = 0;
-            for (int i = n; i < nums.length; i++) {
-                sum += nums[i];
-            }
-            return sum;
+    public static int sumRight(int[] nums, int n) {
+        int sum = 0;
+        for (int i = n; i < nums.length; i++) {
+            sum += nums[i];
         }
+        return sum;
+    }
 
-        public int pivotIndex(int[] nums) {
+    public int pivotIndex(int[] nums) {
 
-            for (int i = 0; i < nums.length; i++) {
-                if (sumLeft(nums, i) == sumRight(nums, i + 1)) {
-                    return i;
-                }
+        for (int i = 0; i < nums.length; i++) {
+            if (sumLeft(nums, i) == sumRight(nums, i + 1)) {
+                return i;
             }
-            return -1;
-
         }
+        return -1;
+
     }
 
     public static void main(String[] args) {

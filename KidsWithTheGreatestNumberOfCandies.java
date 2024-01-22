@@ -29,7 +29,10 @@ Explanation: If you give all extraCandies to:
 import java.util.ArrayList;
 import java.util.List;
 
-class Solution {
+
+
+public class KidsWithTheGreatestNumberOfCandies {
+    
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
 
         List<Boolean> list = new ArrayList();
@@ -45,9 +48,6 @@ class Solution {
         }
         return list;
     }
-}
-
-public class KidsWithTheGreatestNumberOfCandies {
     public static void main(String[] args) {
 
     }

@@ -24,39 +24,39 @@ Output: 0
 Explanation: There are no subarrays of nums where 2 is the least common multiple of all the subarray's elements.
  */
 
-
 public class NumberOfSubarraysWithLCMEqualToK {
-    class Solution {
-        public int gcd(int a , int b){
-            if(a == 0){
-                return b;
-            }
-            return gcd(b%a,a);
+
+    public int gcd(int a, int b) {
+        if (a == 0) {
+            return b;
         }
-        public int lcm(int a , int b){
-            return (a*b)/gcd(a,b);
-        }
-        public int subarrayLCM(int[] nums, int k) {
-            
-            int result = 0;
-            for(int i=0; i< nums.length; i++){
-                int runningLCM = nums[i];
-                for(int j = i; j< nums.length; j++){
-                   runningLCM = lcm(runningLCM, nums[j]);
-                   if(runningLCM >k){
-                      break;
-                   }
-                   if( runningLCM == k) {
-                       result++;
-                   }
-    
+        return gcd(b % a, a);
+    }
+
+    public int lcm(int a, int b) {
+        return (a * b) / gcd(a, b);
+    }
+
+    public int subarrayLCM(int[] nums, int k) {
+
+        int result = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int runningLCM = nums[i];
+            for (int j = i; j < nums.length; j++) {
+                runningLCM = lcm(runningLCM, nums[j]);
+                if (runningLCM > k) {
+                    break;
                 }
+                if (runningLCM == k) {
+                    result++;
+                }
+
             }
-            return result;
         }
+        return result;
     }
 
     public static void main(String[] args) {
-        
+
     }
 }

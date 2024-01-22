@@ -19,6 +19,11 @@ Explanation: The altitudes are [0,-5,-4,1,1,-6]. The highest is 1.
  */
 
 class Solution {
+  
+}
+
+public class FindTheHighestAltitude {
+    
     public int largestAltitude(int[] gain) {
         int alt = 0;
         int result = 0;
@@ -30,9 +35,6 @@ class Solution {
         }
         return result;
     }
-}
-
-public class FindTheHighestAltitude {
     public static void main(String[] args) {
 
     }
