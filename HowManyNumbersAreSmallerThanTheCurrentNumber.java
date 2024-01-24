@@ -23,27 +23,25 @@ For nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).
 
  */
 
- class Solution {
+public class HowManyNumbersAreSmallerThanTheCurrentNumber {
+
     public int[] smallerNumbersThanCurrent(int[] nums) {
-        int [] val = new int[nums.length];
-        for(int i =0; i< nums.length; i++){
+        int[] val = new int[nums.length];
+        for (int i = 0; i < nums.length; i++) {
             val[i] = 0;
-            for (int j =0; j< nums.length; j++){
-                if (nums[j] < nums[i]){
+            for (int j = 0; j < nums.length; j++) {
+                if (nums[j] < nums[i]) {
                     val[i]++;
                 }
 
             }
         }
         return val;
-        
+
     }
-}
 
-
-public class HowManyNumbersAreSmallerThanTheCurrentNumber {
     public static void main(String[] args) {
-        
+
     }
-    
+
 }

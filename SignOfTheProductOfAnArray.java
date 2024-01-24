@@ -28,28 +28,26 @@ Output: -1
 Explanation: The product of all values in the array is -1, and signFunc(-1) = -1
  */
 
-public class ignOfTheProductOfAnArray {
-    class Solution {
-    
-        public int arraySign(int[] nums) {
-            int sign = 0;
-            int n = nums.length;
-    
-            for(int i = 0; i< n; i++){
-                if(nums[i] == 0){
-                    return 0;
-                }
-                else if(nums[i] < 0){
-                    sign++;
-                }
+public class SignOfTheProductOfAnArray {
+
+    public int arraySign(int[] nums) {
+        int sign = 0;
+        int n = nums.length;
+
+        for (int i = 0; i < n; i++) {
+            if (nums[i] == 0) {
+                return 0;
+            } else if (nums[i] < 0) {
+                sign++;
             }
-            if(sign % 2 == 0){
-                return 1;
-            }
-            return -1;
         }
+        if (sign % 2 == 0) {
+            return 1;
+        }
+        return -1;
     }
+
     public static void main(String[] args) {
-        
+
     }
 }
