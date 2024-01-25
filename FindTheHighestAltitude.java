@@ -18,9 +18,7 @@ Explanation: The altitudes are [0,-5,-4,1,1,-6]. The highest is 1.
 
  */
 
-class Solution {
-  
-}
+
 
 public class FindTheHighestAltitude {
     

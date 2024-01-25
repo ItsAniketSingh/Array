@@ -35,7 +35,7 @@ public class KidsWithTheGreatestNumberOfCandies {
     
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
 
-        List<Boolean> list = new ArrayList();
+        List<Boolean> list = new ArrayList<>();
 
         for (int i = 0; i < candies.length; i++) {
             boolean b = true;
