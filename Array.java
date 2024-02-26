@@ -4,7 +4,7 @@ public class Array{
 
 
   public static void create(int size){
-    int [] arr = new int[size];
+    int [] array = new int[size];
   }
 
   
