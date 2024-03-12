@@ -43,6 +43,9 @@ public class TruncateSentence {
             if(count == k){
              ans =s.substring(0,i);
              break;
+
+
+             
             }
             if(count < k)
             ans =s;
